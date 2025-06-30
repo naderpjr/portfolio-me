@@ -66,6 +66,23 @@ body {
     border-radius: 10px;
 }
 
+.btns-switch {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.switch {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.switch a {
+    text-decoration: none;
+    color: #008ecc;
+}
+
 .profile-pic {
     width: 220px;
     height: 220px;
@@ -78,6 +95,7 @@ body {
     color: rgba(0, 255, 0, 0.685);
     font-weight: bold;
     margin-bottom: 1rem;
+    padding: 0 10px;
 }
 
 .tags span {
@@ -219,43 +237,10 @@ footer {
     border-top: 1px solid #222;
 }
 
-
-.liquid-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    backdrop-filter: blur(6px) saturate(180%);
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    transform: translate(-50%, -50%);
-    transition: transform 0.15s ease-out, width 0.3s ease, height 0.3s ease;
-    mix-blend-mode: exclusion;
-    animation: floating 4s ease-in-out infinite;
-}
-
-@keyframes floating {
-
-    0%,
-    100% {
-        transform: translate(-50%, -50%) scale(1);
-    }
-
-    50% {
-        transform: translate(-50%, -50%) scale(1.08);
-    }
-}
-
 @media (max-width: 600px) {
 
     body {
         padding: 2rem;
-        cursor: default;
     }
 
     .tags span,
@@ -284,10 +269,6 @@ footer {
 
     .projects {
         width: 100%;
-    }
-
-    .liquid-cursor {
-        display: none;
     }
 }
 
